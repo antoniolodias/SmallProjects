@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>GitHub API</title>
+        <link href="stylesheet.css" rel="Stylesheet">
+    </head>
+    <body>
+
+        <h1>GitHub API</h1>
+
+        <form>
+            <input type="text" name="username" placeholder="username"></input>
+            <input type="password" name="password" placeholder="password"></input>
+            <input type="text" name="username-to-search" placeholder="username-to-search"></input>
+            <button>submit</button>
+        </form>
+
+        <div class="reposContainer">
+            <div class="commits"></div>
+        </div>
+
+        <script id="repos" type="text/x-handlebars-template">
+            {{#each repos}}
+                <div class="result">
+                    <div class="break"> </div>
+
+                    <div  class="picture">
+                            <img src="{{ owner.avatar_url }}">
+                    </div>
+
+                    <p class="name">{{ full_name }}</p>
+                </div>
+                {{/each}}
+
+        </script>
+
+            <script id="commits" type="text/x-handlebars-template">
+                <div class="lastCommits">
+                    {{#each commits}}
+                        <p class="eachCommit">{{ commit/message }}</p>
+                        {{/each}}
+                </div>
+
+            </script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

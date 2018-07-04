@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Spotify Search</title>
+        <link href="stylesheet.css" rel="Stylesheet">
+    </head>
+    <body>
+
+        <div id="site">
+            <div class="header">
+                <h1>Spotify Search</h1>
+
+                <div class="searchArea">
+                    <input placeholder="Search"></input>
+                    <button class="searchButton">Go</button>
+                </div>
+
+
+                <select class="searchType" name="artistsOrAlbums">
+                    <option value="artist">Artist</opton>
+                    <option value="album">Album</option>
+                </select>
+            </div>
+
+            <div class="resultsMessage">Results for </div>
+            <div class="line"></div>
+
+
+            <div id="resultsList"></div>
+
+
+
+            <div class="more">
+                <button class="moreButton">More</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
